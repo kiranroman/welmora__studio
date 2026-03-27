@@ -1,0 +1,93 @@
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(120deg,#fdfbfb,#ebedee);
+color:#222;
+}
+
+/* NAVBAR */
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+padding:20px 60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(255,255,255,0.8);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.brand{
+font-family:'Playfair Display';
+font-size:28px;
+letter-spacing:2px;
+}
+
+nav a{
+margin-left:25px;
+text-decoration:none;
+color:#444;
+position:relative;
+}
+
+nav a::after{
+content:'';
+position:absolute;
+width:0%;
+height:2px;
+background:#c471ed;
+left:0;
+bottom:-5px;
+transition:0.3s;
+}
+
+nav a:hover::after{
+width:100%;
+}
+
+/* SECTION */
+.section{
+padding:120px 60px;
+text-align:center;
+}
+
+h2{
+font-family:'Playfair Display';
+margin-bottom:30px;
+}
+
+/* FOOTER */
+footer{
+padding:30px;
+text-align:center;
+background:white;
+margin-top:50px;
+}
+/* POPUP */
+.custom-popup{
+position:fixed;
+bottom:30px;
+left:50%;
+transform:translateX(-50%) translateY(50px);
+background:#222;
+color:white;
+padding:15px 25px;
+border-radius:30px;
+opacity:0;
+transition:0.4s;
+z-index:9999;
+}
+
+.custom-popup.show{
+opacity:1;
+transform:translateX(-50%) translateY(0);
+}
